@@ -57,7 +57,7 @@ on behalf of the consumer.
 > (The RabbitMQ Java client is also in the central Maven repository,
 > with the groupId `com.rabbitmq` and the artifactId `amqp-client`.)
 
-Now we have the Java client and its dependencies, we can write some
+Now that we have the Java client and its dependencies, we can write some
 code.
 
 ### Sending
@@ -104,7 +104,7 @@ try (Connection connection = factory.newConnection();
 
 The connection abstracts the socket connection, and takes care of
 protocol version negotiation and authentication and so on for us. Here
-we connect to a broker on the local machine - hence the
+we connect to a broker on the local machine &mdash; hence the
 _localhost_. If we wanted to connect to a broker on a different
 machine we'd simply specify its name or IP address here.
 
@@ -123,7 +123,7 @@ channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
 System.out.println(" [x] Sent '" + message + "'");
 </pre>
 
-Declaring a queue is idempotent - it will only be created if it doesn't
+Declaring a queue is idempotent &mdash; it will only be created if it doesn't
 exist already. The message content is a byte array, so you can encode
 whatever you like there.
 
@@ -144,7 +144,7 @@ class](https://github.com/rabbitmq/rabbitmq-tutorials/blob/master/java/Send.java
 
 ### Receiving
 
-That's it for our publisher.  Our consumer listening for messages from
+That's it for our publisher.  Our consumer is listening for messages from
 RabbitMQ, so unlike the publisher which publishes a single message, we'll
 keep it running to listen for messages and print them out.
 
