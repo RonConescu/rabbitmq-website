@@ -24,11 +24,11 @@ limitations under the License.
 In the [previous tutorial](tutorial-two-java.html) we created a work
 queue. The assumption behind a work queue is that each task is
 delivered to exactly one worker. In this part we'll do something
-completely different -- we'll deliver a message to multiple
+completely different &mdash; we'll deliver a message to multiple
 consumers. This pattern is known as "publish/subscribe".
 
 To illustrate the pattern, we're going to build a simple logging
-system. It will consist of two programs -- the first will emit log
+system. It will consist of two programs &mdash; the first will emit log
 messages and the second will receive and print them.
 
 In our logging system every running copy of the receiver program will
